@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import phoneData from "../data/phoneData.json";
-import "./PhoneList.css";
+// import phoneData from "../data/phoneData.json";
+import "../cssall/PhoneList.css";
 
 const PhoneList = () => {
   const [phones, setPhones] = useState(phoneData["모두"]);

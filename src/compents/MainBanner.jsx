@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./MainBanner.css";
+import "../cssall/Banner.css";
 
 const MainBanner = () => {
   useEffect(() => {

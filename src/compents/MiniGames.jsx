@@ -1,5 +1,5 @@
 import React from "react";
-import "./MiniGames.css";
+import "../cssall/MiniGames.css";
 
 const MiniGames = () => {
   return (
