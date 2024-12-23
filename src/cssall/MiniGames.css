@@ -1,27 +1,49 @@
-.mini-games {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    background-color: #333;
-    color: white;
+.main-banner {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: 450px;
+    margin: 0 auto;
+    overflow: hidden;
   }
   
-  .game {
-    text-align: center;
+  .banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
   }
   
-  .game img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  .banner-image.active {
+    opacity: 1;
+    z-index: 1;
   }
   
-  .game p {
-    font-size: 14px;
-    margin: 0;
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .prev img,
+  .next img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
   }
   

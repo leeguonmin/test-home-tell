@@ -3,19 +3,15 @@ import "../cssall/Header.css";
 
 const Header = () => {
   return (
-    <header>
-      <a href="#" className="home-button">
-        홈
-      </a>
+    <header className="header">
       <div className="logo">GDH 통신사</div>
-      <div className="menu">
-        <button>메뉴1</button>
-        <button>메뉴2</button>
-        <button>메뉴3</button>
-        <button>메뉴4</button>
-      </div>
+      <nav className="menu">
+        <button>홈</button>
+        <button>요금제</button>
+        <button>핸드폰</button>
+      </nav>
       <div className="search-bar">
-        <input type="text" placeholder="검색어 입력" />
+        <input type="text" placeholder="검색어를 입력하세요" />
         <button>검색</button>
       </div>
     </header>

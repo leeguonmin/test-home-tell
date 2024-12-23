@@ -1,34 +1,63 @@
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
+.app-header {
+    background-color: #03588c;
     color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
   }
   
-  .home-button {
+  .app-header .home-button {
+    font-size: 16px;
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    background-color: #66cdd9;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
   }
   
-  .logo {
+  .app-header .logo {
     font-size: 24px;
     font-weight: bold;
+    text-align: center;
+    color: white;
+    flex: 1;
   }
   
-  .menu button {
-    background-color: #555;
+  .app-header .menu {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .app-header .menu button,
+  .app-header .search-bar button {
+    background-color: #66cdd9;
     color: white;
     border: none;
-    padding: 8px 12px;
-    margin-left: 10px;
+    padding: 10px 15px;
+    font-size: 14px;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
   }
   
-  .menu button:hover {
-    background-color: #777;
+  .app-header .menu button:hover,
+  .app-header .search-bar button:hover {
+    background-color: #2b718c;
   }
   
+  .app-header .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .app-header .search-bar input {
+    padding: 10px;
+    border: 1px solid #66cdd9;
+    border-radius: 10px;
+    width: 200px;
+    font-size: 14px;
+  }  
