@@ -42,7 +42,7 @@
 } */
 
 
-body {
+/* body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #fafafa;
@@ -61,4 +61,40 @@ button {
 
 button:focus {
   outline: none;
+} */
+
+
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.app-header {
+  background-color: #03588c;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.dropdown {
+  margin: 20px;
+  text-align: center;
+}
+
+.dropdown button {
+  background-color: #03588c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.dropdown button:hover {
+  background-color: #66cdd9;
 }
