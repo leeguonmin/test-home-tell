@@ -173,12 +173,18 @@ function App() {
   const [selectedAgeGroup, setSelectedAgeGroup] = useState("모두");
   const [phones, setPhones] = useState([]);
 
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // 드롭다운 상태 관리
+
   useEffect(() => {
     setPhones(phoneData[selectedAgeGroup] || phoneData["모두"]);
   }, [selectedAgeGroup]);
 
   const handleFilter = (ageGroup) => {
     setSelectedAgeGroup(ageGroup);
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen((prev) => !prev);
   };
 
   return (
@@ -194,15 +200,31 @@ function App() {
 
       <MiniGames />
 
+
+
+
+
+
+{/* +++++++++++++++++++++++++++++ */}
+      {/* 드롭다운 메뉴 */}
       <div className="dropdown">
-        <button onClick={() => handleFilter("모두")}>모두</button>
-        <button onClick={() => handleFilter("10대")}>10대</button>
-        <button onClick={() => handleFilter("20대")}>20대</button>
-        <button onClick={() => handleFilter("30대")}>30대</button>
-        <button onClick={() => handleFilter("40대")}>40대</button>
-        <button onClick={() => handleFilter("50대")}>50대</button>
+        <button className="dropdown-toggle" onClick={toggleDropdown}>
+          {selectedAgeGroup}
+        </button>
+        {isDropdownOpen && (
+          <div className="dropdown-menu">
+            <button onClick={() => handleFilter("모두")}>모두</button>
+            <button onClick={() => handleFilter("10대")}>10대</button>
+            <button onClick={() => handleFilter("20대")}>20대</button>
+            <button onClick={() => handleFilter("30대")}>30대</button>
+            <button onClick={() => handleFilter("40대")}>40대</button>
+            <button onClick={() => handleFilter("50대")}>50대</button>
+          </div>
+        )}
       </div>
+
       <PhoneList phones={phones} />
+      {/* +++++++++++++++++++++++++++++++++++++ */}
     </div>
   );
 }

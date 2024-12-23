@@ -44,3 +44,63 @@
     color: #666;
   }
   
+
+ /* 드롭다운 컨테이너 */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* 드롭다운 버튼 */
+.dropdown button {
+  background-color: #03588C;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+.dropdown button:hover {
+  background-color: #66CDD9;
+}
+
+/* 드롭다운 메뉴 */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: white;
+  min-width: 160px;
+  border: 1px solid #66CDD9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 10px;
+  text-align: left;
+}
+
+/* 드롭다운 항목 */
+.dropdown-content a {
+  color: #03588C;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: #66CDD9;
+  color: white;
+}
+
+/* 드롭다운 활성화 */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* 휴대폰 목록 */
+.phone-list {
+  display

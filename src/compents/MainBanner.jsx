@@ -21,6 +21,7 @@ const MainBanner = () => {
   };
 
   return (
+    <div>
     <div className="main-banner">
       {images.map((image, index) => (
         <img
@@ -36,17 +37,17 @@ const MainBanner = () => {
       <button className="next" onClick={handleNext}>
         ❯
       </button>
-
-      <div className="slide-dots">
-        {images.map((_, index) => (
-          <span
-            key={index}
-            className={`dot ${index === currentIndex ? "active" : ""}`}
-            onClick={() => setCurrentIndex(index)}
-          ></span>
-        ))}
-      </div>
     </div>
+    <div className="slide-dots">
+      {images.map((_, index) => (
+        <span
+          key={index}
+          className={`dot ${index === currentIndex ? "active" : ""}`}
+          onClick={() => setCurrentIndex(index)}
+        ></span>
+      ))}
+    </div>
+  </div>
   );
 };
 
