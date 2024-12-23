@@ -26,9 +26,7 @@ import "../cssall/Header.css";
 function Header() {
   return (
     <header className="header">
-      <a href="#" class="home">
-        홈
-      </a>
+      <a href="#" class="home">홈</a>
 
       <div className="logo">GDH 통신사</div>
       <nav className="menu">
