@@ -1,106 +1,135 @@
-/* PhoneList.css */
+/* 휴대폰 목록 */
 .phone-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .phone-item {
-    background-color: #ffffff;
-    border: 2px solid #66cdd9;
-    border-radius: 15px;
-    text-align: center;
-    padding: 10px;
-    width: 200px;
-    transition: transform 0.3s, background-color 0.3s;
-  }
-  
-  .phone-item:hover {
-    background-color: #f0f8ff;
-    transform: scale(1.05);
-  }
-  
-  .phone-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  .phone-info {
-    margin-top: 10px;
-  }
-  
-  .phone-info h3 {
-    font-size: 18px;
-    margin: 10px 0;
-  }
-  
-  .capacity,
-  .price,
-  .provider {
-    margin: 5px 0;
-    color: #666;
-  }
-  
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
 
- /* 드롭다운 컨테이너 */
+.phone-item {
+  background-color: #ffffff;
+  border: 2px solid #66cdd9;
+  border-radius: 15px;
+  text-align: center;
+  padding: 10px;
+  width: 200px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.phone-item:hover {
+  background-color: #f0f8ff;
+  transform: scale(1.05);
+}
+
+.phone-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.phone-info {
+  margin-top: 10px;
+}
+
+.phone-info h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.capacity,
+.price,
+.provider {
+  margin: 5px 0;
+  color: #666;
+}
+
+/* 상단 섹션 레이아웃 */
+.top-phones-section {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 20px; /* 제목과 드롭다운 간격 */
+  margin-bottom: 20px; /* 리스트와 간격 */
+  margin-left: 20px; /* 왼쪽 마진 추가 */
+
+
+}
+
+/* 제목 스타일 */
+.top-phones-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+/* 드롭다운 컨테이너 */
 .dropdown {
   position: relative;
-  display: inline-block;
 }
 
 /* 드롭다운 버튼 */
-.dropdown button {
-  background-color: #03588C;
+.dropdown-button {
+  background-color: #03588C; /* 파란색 */
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   font-size: 16px;
   border-radius: 20px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-.dropdown button:hover {
+.dropdown-button:hover {
   background-color: #66CDD9;
 }
 
 /* 드롭다운 메뉴 */
-.dropdown-content {
-  display: none;
+.dropdown-menu {
+  display: flex;
   position: absolute;
-  left: 0;
+  /* top: calc(100% + 10px);  */
   top: 100%;
+  left: 0;
   background-color: white;
-  min-width: 160px;
+  min-width: 200px;
   border: 1px solid #66CDD9;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 1000;
   border-radius: 10px;
   text-align: left;
+  padding: 10px 0;
 }
 
 /* 드롭다운 항목 */
-.dropdown-content a {
+.dropdown-item {
   color: #03588C;
   padding: 8px 16px;
   text-decoration: none;
   display: block;
-  border-radius: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
 }
 
-.dropdown-content a:hover {
+.dropdown-item:hover {
   background-color: #66CDD9;
   color: white;
 }
 
 /* 드롭다운 활성화 */
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-menu {
   display: block;
 }
 
-/* 휴대폰 목록 */
-.phone-list {
-  display
+/* 드롭다운 버튼에 포커스 스타일 추가 */
+.dropdown-button:focus {
+  outline: 2px solid #66CDD9; /* 포커스 테두리 */
+}
+
+/* 드롭다운 버튼 active 상태 스타일 추가 */
+.dropdown-button.active {
+  background-color: #66CDD9;
+  color: white;
+}

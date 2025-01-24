@@ -5,8 +5,10 @@ import Header from "./compents/Header";
 import MainBanner from "./compents/MainBanner";
 import MiniGames from "./compents/MiniGames";
 import PhoneList from "./compents/PhoneList";
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 
+// import Ads from "./compents/Ads";
+import Footer from "./compents/Footer";
 import "./App.css";
 
 const phoneData = {
@@ -169,23 +171,23 @@ const phoneData = {
 };
 
 function App() {
-  // const [count, setCount] = useState(0);
-  const [selectedAgeGroup, setSelectedAgeGroup] = useState("모두");
-  const [phones, setPhones] = useState([]);
+  // // const [count, setCount] = useState(0);
+  // const [selectedAgeGroup, setSelectedAgeGroup] = useState("모두");
+  // const [phones, setPhones] = useState([]);
 
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // 드롭다운 상태 관리
+  // const [isDropdownOpen, setIsDropdownOpen] = useState(false); // 드롭다운 상태 관리
 
-  useEffect(() => {
-    setPhones(phoneData[selectedAgeGroup] || phoneData["모두"]);
-  }, [selectedAgeGroup]);
+  // useEffect(() => {
+  //   setPhones(phoneData[selectedAgeGroup] || phoneData["모두"]);
+  // }, [selectedAgeGroup]);
 
-  const handleFilter = (ageGroup) => {
-    setSelectedAgeGroup(ageGroup);
-  };
+  // const handleFilter = (ageGroup) => {
+  //   setSelectedAgeGroup(ageGroup);
+  // };
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen((prev) => !prev);
-  };
+  // const toggleDropdown = () => {
+  //   setIsDropdownOpen((prev) => !prev);
+  // };
 
   return (
     <div className="App">
@@ -200,14 +202,9 @@ function App() {
 
       <MiniGames />
 
-
-
-
-
-
-{/* +++++++++++++++++++++++++++++ */}
+      {/* +++++++++++++++++++++++++++++ */}
       {/* 드롭다운 메뉴 */}
-      <div className="dropdown">
+      {/* <div className="dropdown">
         <button className="dropdown-toggle" onClick={toggleDropdown}>
           {selectedAgeGroup}
         </button>
@@ -221,10 +218,12 @@ function App() {
             <button onClick={() => handleFilter("50대")}>50대</button>
           </div>
         )}
-      </div>
+      </div> */}
 
-      <PhoneList phones={phones} />
+      <PhoneList phoneData={phoneData} />
       {/* +++++++++++++++++++++++++++++++++++++ */}
+      {/* <Ads /> */}
+      <Footer />
     </div>
   );
 }
